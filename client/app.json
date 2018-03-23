@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/constellation/constellation",
+    "pages/userCenter/userCenter"
+  ],
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list":[{
+        "text": "星运",
+        "pagePath": "pages/constellation/constellation"
+      },{
+      "text":"测试",
+      "pagePath":"pages/index/index"
+    },{
+      "text": "我的",
+      "pagePath": "pages/userCenter/userCenter"
+    }],
+    "color":"#FFFFFF",
+    "selectedColor":"#F6F6F6",
+    "backgroundColor":"#000000"
+  }
+}
