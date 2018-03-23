@@ -1,2 +1,5 @@
 <!--pages/userCenter/userCenter.wxml-->
 <view bindtap="getData">点击</view>
+<view wx:for = "{{cons}}" wx:for-item="item">
+  {{item.name}}
+</view>

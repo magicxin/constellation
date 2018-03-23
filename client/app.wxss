@@ -1,4 +1,13 @@
 /**app.wxss**/
+@font-face {
+  font-family: 'iconfont';  /* project id 529530 */
+  src: url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.eot');
+  src: url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.svg#iconfont') format('svg');
+}
+
 .container {
   display: flex;
   flex-direction: column;

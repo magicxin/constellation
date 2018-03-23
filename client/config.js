@@ -3,10 +3,12 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'https://cxmubrhr.qcloud.la';
+// var host = 'https://cxmubrhr.qcloud.la';
+var host = 'https://784046738.magicx.xyz'
 
 var config = {
-
+    //静态配置
+    avatarkey: 'ff3911e2f31944b6a292daabc7d467c3',
     // 下面的地址配合云端 Demo 工作
     service: {
         host,
@@ -23,7 +25,9 @@ var config = {
         // 上传图片接口
         uploadUrl: `${host}/weapp/upload`,
         //上传星座接口
-        uploadConstellation: `${host}/weapp/uploadConstellation`
+        uploadConstellation: `${host}/weapp/uploadConstellation`,
+        //请求星座接口
+        getConstellation: 'https://api.avatardata.cn/Constellation/Query'
     }
 };
 
