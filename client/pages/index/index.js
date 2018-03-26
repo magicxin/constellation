@@ -1,32 +1,24 @@
 // index.js
+var config = require('../../config')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  /**
-   * 获取数据
-   */
-
-  getData() {
-    wx.request({
-      url: 'https://api.avatardata.cn/Constellation/Query',
-      data: {
-        key: 'ff3911e2f31944b6a292daabc7d467c3',
-        type: 'today',
-        consName: '处女座'
-      },
-      // header: {
-      //   'content-type': 'application/json' // 默认值
-      // },
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
+    cons:{
+      name:'',
+      date:'',
+      all:'',
+      love:'',
+      work:'',
+      money:'',
+      health:'',
+      qfriend:'',
+      color:'',
+      number:'',
+      summary:''
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -39,7 +31,37 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let that = this
+    wx.request({
+      url: config.client.getConstellation,
+      data: {
+        consname:'处女座',
+        type:'today',
+        date:'20180326'
+      },
+      success: function (res) {
+        console.log(res.data.data[0])
+        let cons = res.data.data[0]
+        that.setData({
+          cons: {
+            name: cons.name + ' (01.11-.2.11)',
+            date: cons.date,
+            all: cons.allthing,
+            love: cons.love,
+            work: cons.work,
+            money: cons.money,
+            health: cons.health,
+            qfriend: cons.qfriend,
+            color: cons.color,
+            number: cons.number,
+            summary: cons.summary,
+          }
+        })
+      },
+      fail: function (err) {
+        
+      }
+    })
   },
 
   /**

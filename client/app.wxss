@@ -14,16 +14,38 @@
   align-items: center;
   box-sizing: border-box;
 } 
-
+.mb-1 {
+  margin-bottom: 1em;
+}
 .mb-4 {
   margin-bottom: 4px;
 }
+
 .p-1 {
   padding:1em;
 }
+.ptb-4 {
+  padding:4px 0;
+}
+
 .f-14 {
   font-size:14px;
 }
 .f-12 {
   font-size:12px;
+}
+
+.f-blue {
+  color:#1296db;
+}
+.f-999 {
+color:#999;
+}
+
+.b-lightblue {
+  background:#f1fbfc;
+}
+
+.border-4{
+  border-radius: 4px;
 }

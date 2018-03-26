@@ -6,12 +6,30 @@ page {
     justify-content: flex-start;
     font-size:14px;
 }
-.header{
+.cons-header{
     display:flex;
     justify-content: space-between;
     background:#fff;
     color:#1296db;
 }
-.container {
+.cons-container {
     background: #fff;
+}
+.cons-container .bottom {
+  display:flex;
+}
+.cons-container .cons-content {
+  flex : 1 1 0;
+}
+.cons-container .item {
+  display:flex;
+}
+.summary {
+
+}
+.summary .title {
+  
+}
+.summary .content {
+  
 }
