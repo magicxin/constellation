@@ -8,7 +8,8 @@ var host = 'https://784046738.magicx.xyz'
 
 var config = {
     //静态配置
-    avatarkey: 'ff3911e2f31944b6a292daabc7d467c3',
+    // avatarkey: 'ff3911e2f31944b6a292daabc7d467c3', 
+    avatarkey: 'bef1d4393c894a9f82ec55d4bc179307',
     // 下面的地址配合云端 Demo 工作
     service: {
         host,

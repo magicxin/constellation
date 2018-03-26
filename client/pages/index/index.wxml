@@ -1,2 +1,38 @@
 <!--index.wxml-->
-<view bindtap="getData">点击</view>
+<view class="header p-1 mb-4">
+    <view>处女座 (1.11-2.11)</view>
+    <view>切换</view>
+</view>
+<view class="container p-1">
+    <view class="f-12">2018年3月24日</view>
+    <view class="bottom">
+        <view class="cons-content">
+            <view class="">
+                <view class="">综合运势：</view><view class=""></view>
+            </view>
+            <view class="">
+                <view class="">事业学业：</view><view class=""></view>
+            </view>
+            <view class="">
+                <view class="">健康指数：</view><view class="">90%</view>
+            </view>
+            <view class="">
+                <view class="">幸运颜色：</view><view class="">蓝色</view>
+            </view>
+        </view>
+        <view class="cons-content">
+            <view class="">
+                <view class="">爱情指数：</view><view class=""></view>
+            </view>
+            <view class="">
+                <view class="">财富运势：</view><view class=""></view>
+            </view>
+            <view class="">
+                <view class="">最佳星友：</view><view class="">处女座</view>
+            </view>
+            <view class="">
+                <view class="">幸运数字：</view><view class="">6</view>
+            </view>
+        </view>
+    </view>
+</view>
