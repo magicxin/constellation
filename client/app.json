@@ -19,11 +19,6 @@
         "iconPath":"./icons/cons_unselect.png",
         "selectedIconPath":"./icons/cons_select.png"
       },{
-      "text":"测试",
-      "pagePath":"pages/test/test",
-      "iconPath": "./icons/cons_unselect.png",
-      "selectedIconPath": "./icons/cons_select.png"
-    },{
       "text": "我的",
       "pagePath": "pages/userCenter/userCenter",
       "iconPath": "./icons/user_unselect.png",

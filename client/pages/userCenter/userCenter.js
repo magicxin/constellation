@@ -7,6 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    avatar:'',
+    nickname:'',
+    menu:['建议','设置'],
     cons: [],
     otherArr: [
      { type: 'today', consName: '摩羯座' }, { type: 'today', consName: '水瓶座' }, { type: 'today', consName: '双鱼座' },
@@ -57,7 +60,11 @@ Page({
   /**
      * 获取数据
      */
-
+  goTo(){
+    wx.showToast({
+      title: '期待中...',
+    })
+  },
   getData() {
     let that = this
     let consarr = []
@@ -103,7 +110,18 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let that = this
+    wx.getStorage({
+      key: 'user',
+      success: function(res) {
+        console.log(res.data)
+        that.setData({
+          avatar: res.data.avatarUrl,
+          nickname: res.data.nickName,
+          id: res.data.openId
+        })
+      },
+    })
   },
 
   /**

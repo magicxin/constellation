@@ -1,7 +1,7 @@
 <!--index.wxml-->
-<view class="cons-header p-1 mb-4">
-    <view>{{cons.name}}</view>
-    <view>切换</view>
+<view class="cons-header mb-4">
+    <view class="p-1">{{picker_val_show}}</view>
+    <view class="p-1" bindtap='showPicker'>切换</view>
 </view>
 <view class="cons-container p-1 f-14">
     <view class="f-12 ptb-4 f-blue">{{cons.date}}</view>
@@ -40,4 +40,15 @@
       <view class="title mb-1">总述</view>
       <view class="content p-1 b-lightblue f-999 border-4">{{cons.summary}}</view>
     </view>
+</view>
+
+<view class="{{picker}}" style="width: 100%; height: 300px;">
+    <view class="picker-title p-1" bindtap='confirmCons'>
+      确定
+    </view>
+    <picker-view class="picker" indicator-class="indicator" style="width: 100%; height: 250px;" mask-class="mask" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{cons_name}}" class="item">{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
 </view>

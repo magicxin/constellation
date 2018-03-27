@@ -38,5 +38,4 @@ var showModel = (title, content) => {
         showCancel: false
     })
 }
-
 module.exports = { formatTime, showBusy, showSuccess, showModel }

@@ -14,20 +14,28 @@
   align-items: center;
   box-sizing: border-box;
 } 
+
+.mtb-1 {
+  margin:1em 0;
+}
 .mb-1 {
   margin-bottom: 1em;
 }
 .mb-4 {
   margin-bottom: 4px;
 }
-
+.ml-1 {
+  margin-left:1em;
+}
 .p-1 {
   padding:1em;
 }
 .ptb-4 {
   padding:4px 0;
 }
-
+.ptb-8 {
+  padding:8px;
+}
 .f-14 {
   font-size:14px;
 }
@@ -42,6 +50,12 @@
 color:#999;
 }
 
+.b {
+  background:#F6F6F6;
+}
+.b-white {
+  background:#fff;
+}
 .b-lightblue {
   background:#f1fbfc;
 }

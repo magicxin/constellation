@@ -1,5 +1,14 @@
 <!--pages/userCenter/userCenter.wxml-->
-<view bindtap="getData">点击</view>
-<view wx:for = "{{cons}}" wx:for-item="item">
-  {{item.name}}
+ <view wx:if="id==='okUEM0XNLQTorG9MDHxqIgqvQ0vk'" bindtap="getData">点击</view> 
+<view class="container userinfo b">
+  <view class="title mtb-1 b-white ptb-4">
+      <image
+      class="ml-1" src="{{avatar ? avatar : './user-unlogin.png'}}"
+      background-size="cover"></image>
+      <view class="text ml-1">{{nickname}}</view>
+  </view>
+  <view></view>
+  <view wx:for="{{menu}}"  wx:for-item="item" class="setting b-white p-1" bindtap='goTo'>
+    <view class="ml-1">{{item}}</view>
+  </view>
 </view>

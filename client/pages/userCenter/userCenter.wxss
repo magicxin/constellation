@@ -1,1 +1,22 @@
 /* pages/userCenter/userCenter.wxss */
+.container {
+  justify-content: flex-start;
+  overflow:hidden;
+}
+.userinfo .title {
+  width:100%;
+  display:flex;
+}
+.userinfo .title image {
+  width:70px;
+  height:70px;
+}
+.userinfo .title .text {
+  display:flex;
+  align-items: center;
+}
+.userinfo .setting {
+  display:flex;
+  width:100%;
+  border-bottom:1px solid #F6F6F6;
+}

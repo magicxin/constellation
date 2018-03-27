@@ -10,7 +10,7 @@ var getAvatar = function(){
   // let time = [0,30]
   rule.second   = 60
   //'* 1 0 * * *'
-  var j = schedule.scheduleJob({ start: startTime, end: endTime, rule: '* 1 0 * * *'}, function () {
+  var j = schedule.scheduleJob({ start: startTime, end: endTime, rule: '0 1 0 * * *'}, function () {
     console.log(new Date(Date.now()))
 
     let data = {
