@@ -7,12 +7,17 @@
   url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_529530_fk8kf5wykw23ayvi.svg#iconfont') format('svg');
 }
+html,body{
+		height:100%;
+		padding:0;
+		margin:0;
+		box-sizing: border-box;
+	}
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
 } 
 
 .mtb-1 {

@@ -21,7 +21,6 @@ module.exports = async ctx => {
       type: item.type
     })
   })
-  await mysql('constellation')
-    .insert(arr)
+  await mysql.raw(mysql('constellation').insert(arr).toString().replace('insert', 'INSERT IGNORE'));
   ctx.state.data = ctx.request.body
 }

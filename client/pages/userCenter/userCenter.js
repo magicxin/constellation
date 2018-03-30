@@ -9,7 +9,7 @@ Page({
   data: {
     avatar:'',
     nickname:'',
-    menu:['建议','设置'],
+    menu:['建议','设置','联系我 sx32612254@gmail.com'],
     cons: [],
     otherArr: [
      { type: 'today', consName: '摩羯座' }, { type: 'today', consName: '水瓶座' }, { type: 'today', consName: '双鱼座' },

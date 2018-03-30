@@ -1,5 +1,5 @@
 <!--pages/userCenter/userCenter.wxml-->
- <view wx:if="id==='okUEM0XNLQTorG9MDHxqIgqvQ0vk'" bindtap="getData">点击</view> 
+   <!-- <view wx:if="id==='okUEM0XNLQTorG9MDHxqIgqvQ0vk'" bindtap="getData">点击</view>    -->
 <view class="container userinfo b">
   <view class="title mtb-1 b-white ptb-4">
       <image
