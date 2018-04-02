@@ -20,16 +20,17 @@ var otherArr = [
   { type: 'week', consName: '巨蟹座' }, { type: 'week', consName: '狮子座' }, { type: 'week', consName: '处女座' },
   { type: 'week', consName: '天秤座' }, { type: 'week', consName: '天蝎座' }, { type: 'week', consName: '射手座' },
 
-  // { type: 'nextweek', consName: '摩羯座' }, { type: 'nextweek', consName: '水瓶座' }, { type: 'nextweek', consName: '双鱼座' },
-  // { type: 'nextweek', consName: '白羊座' }, { type: 'nextweek', consName: '金牛座' }, { type: 'nextweek', consName: '双子座' },
-  // { type: 'nextweek', consName: '巨蟹座' }, { type: 'nextweek', consName: '狮子座' }, { type: 'nextweek', consName: '处女座' },
-  // { type: 'nextweek', consName: '天秤座' }, { type: 'nextweek', consName: '天蝎座' }, { type: 'nextweek', consName: '射手座' },
 
   { type: 'month', consName: '摩羯座' }, { type: 'month', consName: '水瓶座' }, { type: 'month', consName: '双鱼座' },
   { type: 'month', consName: '白羊座' }, { type: 'month', consName: '金牛座' }, { type: 'month', consName: '双子座' },
   { type: 'month', consName: '巨蟹座' }, { type: 'month', consName: '狮子座' }, { type: 'month', consName: '处女座' },
   { type: 'month', consName: '天秤座' }, { type: 'month', consName: '天蝎座' }, { type: 'month', consName: '射手座' }
 ]
+
+  // { type: 'nextweek', consName: '摩羯座' }, { type: 'nextweek', consName: '水瓶座' }, { type: 'nextweek', consName: '双鱼座' },
+  // { type: 'nextweek', consName: '白羊座' }, { type: 'nextweek', consName: '金牛座' }, { type: 'nextweek', consName: '双子座' },
+  // { type: 'nextweek', consName: '巨蟹座' }, { type: 'nextweek', consName: '狮子座' }, { type: 'nextweek', consName: '处女座' },
+  // { type: 'nextweek', consName: '天秤座' }, { type: 'nextweek', consName: '天蝎座' }, { type: 'nextweek', consName: '射手座' },
 //阿凡达api查询接口
 var constellation = function (type, consName) {
   return new Promise((resolve, reject) => {
@@ -43,10 +44,22 @@ var constellation = function (type, consName) {
     .then(res=>{
       resolve(res)
     })
-    .catch(err=>{
-      reject(err)
-    })
+    // .catch(err=>{
+    //   reject(err)
+    // })
   })
+}
+
+/**
+   * 数据处理
+   */
+let makeData = function(res) {
+  let data = []
+  res.forEach((item, index) => {
+    data.push(Object.assign({}, JSON.parse(item).result1, otherArr[index]))
+  })
+  // console.log(data)
+  return data
 }
 
 var getAvatar = function(){
@@ -80,10 +93,12 @@ var getAvatar = function(){
     //同时插入星座数据到腾讯云数据库，并校验唯一性
     Promise.all(consarr)
       .then(res => {
-        let result = JSON.parse(res)
-
+        // let result = JSON.parse(res)
+        let result = makeData(res)
+        let arr = []
+        // console.log(result)
         result && result.length && result.forEach(item => {
-          console.log(item)
+          // console.log(item)
           arr.push({
             qfriend: item.QFriend ? item.QFriend : '',
             allthing: item.all ? item.all : '',
@@ -101,7 +116,12 @@ var getAvatar = function(){
             type: item.type
           })
         })
-        mysql.raw(mysql('constellation').insert(arr).toString().replace('insert', 'INSERT IGNORE'));
+        // console.log(arr)
+        mysql('constellation').insert(arr)
+        .then(res=>{
+          console.log(res)
+        })
+        
       })
   })
   
